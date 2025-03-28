@@ -1,0 +1,17 @@
+<h1>Galería de Imágenes</h1>
+
+{{#if hasFiles}}
+    <div style="display: flex; flex-wrap: wrap;">
+        {{#each files}}
+            <img src="/uploads/{{this}}" alt="Imagen subida" style="width: 150px; margin: 10px;">
+        {{/each}}
+    </div>
+    <a href="/upload">Subir otra imagen</a>
+{{else}}
+    <p>No hay imágenes actualmente. ¡Sube la primera imagen!</p>
+    <a href="/upload">
+        <button>Subir imagen</button>
+    </a>
+{{/if}}
+
+
