@@ -1,3 +1,5 @@
+import dotenv from 'dotenv';
+dotenv.config();
 import express, { Request, Response } from 'express';
 import multer from 'multer';
 import path from 'path';
@@ -6,7 +8,7 @@ import { engine } from 'express-handlebars';
 
 // Variables globales
 const app = express();
-const port = 3000;
+const port = process.env.PORT || 5000;
 const uploadDir = path.join(__dirname, '..', 'uploads');
 
 // Asegurar que la carpeta uploads existe
