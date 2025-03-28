@@ -1,17 +1,23 @@
-<h1>Galería de Imágenes</h1>
-
-{{#if hasFiles}}
-    <div style="display: flex; flex-wrap: wrap;">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galería de Imágenes</title>
+    <link rel="stylesheet" href="/styles.css"> <!-- Enlaza tu CSS -->
+</head>
+<body>
+    <h1>Galería de Imágenes</h1>
+    <div class="gallery">
         {{#each files}}
-            <img src="/uploads/{{this}}" alt="Imagen subida" style="width: 150px; margin: 10px;">
+            <div>
+                <img src="{{this.url}}" alt="Imagen">
+            </div>
         {{/each}}
     </div>
-    <a href="/upload">Subir otra imagen</a>
-{{else}}
-    <p>No hay imágenes actualmente. ¡Sube la primera imagen!</p>
-    <a href="/upload">
-        <button>Subir imagen</button>
-    </a>
-{{/if}}
 
-
+    <div class="upload-container">
+        <a href="/upload" class="upload-button">Subir una nueva imagen</a>
+    </div>
+</body>
+</html>
