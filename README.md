@@ -68,21 +68,39 @@ El servidor correrá en `http://localhost:3000/`.
 
 ## Estructura del proyecto
 ```
-/tarea3
-|── /dist
-|   |── server.js
-│── /node_modules          
-│── /uploads                
-│── /views                 
-│   │── /layouts
-│   │   └── main.handlebars 
-│   │── gallery.handlebars 
-│   └── upload.handlebars   
-│── /src                    
-│   └── server.ts            
-│── .gitignore              
-│── package.json            
-│── tsconfig.json           
-│── README.md               
-
+/ImagePoster
+|__ /dist
+|   |__ server.js
+|__ /public
+|   |__ styles.css
+|__ /src
+|   |__ /config
+|   |   |__ databaseConfig.ts
+|   |__ /controllers
+|   |   |__ authController.ts
+|   |   |__ galleryController.ts
+|   |   |__ uploadController.ts
+|   |__ /middlewares
+|   |   |__ S3Middleware.ts
+|   |__ /models
+|   |   |__ userModel.ts
+|   |__ /routes
+|   |   |__ galleryRoutes.ts
+|   |   |__ uploadRoutes.ts
+|   |__ /types
+|   |   |__ httpStatus.ts
+|   |__ server.ts
+|__ /views
+|   |__ /layouts
+|   |   |__ main.handlebars
+|   |__ admin.handlebars
+|   |__ gallery.handlebars
+|   |__ login.handlebars
+|   |__ signup.handlebars
+|   |__ upload.handlebars
+|__ .env
+|__ .gitignore
+|__ package.json
+|__ README.md
+|__ tsconfig.json
 ```

@@ -5,7 +5,8 @@ import path from 'path';
 import { engine } from 'express-handlebars';
 import galleryRoutes from './routes/galleryRoutes';
 import uploadRoutes from './routes/uploadRoutes';
-import { connectDB } from './config/database';
+import loginRoutes from './routes/loginRoutes';
+import { connectDB } from './config/databaseConfig';
 
 // Configuración de Express
 const app = express();
@@ -25,6 +26,7 @@ app.use(express.static(path.join(__dirname, '..', 'public')));
 // Usar rutas
 app.use(galleryRoutes);
 app.use(uploadRoutes);
+app.use(loginRoutes);
 
 // Iniciar servidor
 app.listen(port, () => {

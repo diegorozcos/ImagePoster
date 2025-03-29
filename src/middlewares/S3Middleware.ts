@@ -12,7 +12,7 @@ export const s3 = new S3Client({
         accessKeyId: process.env.S3_ACCESS!,
         secretAccessKey: process.env.S3_SECRET!
     }
-});
+})
 
 // Configuración de Multer para S3
 const storage = multers3({
@@ -25,7 +25,7 @@ const storage = multers3({
         const fileExtension = path.extname(file.originalname);
         cb(null, Date.now().toString() + fileExtension);
     }
-});
+})
 
 // Filtro para validar archivos permitidos
 const fileFilter = (req: any, file: Express.Multer.File, cb: multer.FileFilterCallback) => {
@@ -35,9 +35,9 @@ const fileFilter = (req: any, file: Express.Multer.File, cb: multer.FileFilterCa
     } else {
         cb(new Error('Solo se permiten formatos JPG o PNG'));
     }
-};
+}
 
 export const upload = multer({ 
     storage, 
     fileFilter 
-});
+})

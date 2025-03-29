@@ -25,6 +25,7 @@
   "devDependencies": {
     "@types/express": "^5.0.1",
     "@types/express-handlebars": "^5.3.1",
+    "@types/jsonwebtoken": "^9.0.9",
     "@types/multer": "^1.4.12",
     "@types/multer-s3": "^3.0.3",
     "@types/node": "^22.13.13",

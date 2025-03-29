@@ -2,7 +2,7 @@ import dotenv from 'dotenv';
 dotenv.config();
 import { Request, Response } from 'express';
 import { ListObjectsV2Command } from "@aws-sdk/client-s3";
-import { s3 } from '../middlewares/multerMiddleware';
+import { s3 } from '../middlewares/S3Middleware';
 
 export const getGallery = async (req: Request, res: Response) => {
     try {
@@ -20,4 +20,4 @@ export const getGallery = async (req: Request, res: Response) => {
         console.error("Error al obtener imágenes de S3:", error);
         res.status(500).send("Error al obtener imágenes");
     }
-};
+}

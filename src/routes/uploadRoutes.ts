@@ -1,6 +1,6 @@
 import express from 'express';
 import { getUploadForm, uploadFile, handleUploadError } from '../controllers/uploadController';
-import { upload } from '../middlewares/multerMiddleware'; // Ahora importamos desde `middlewares/`
+import { upload } from '../middlewares/S3Middleware'; // Ahora importamos desde `middlewares/`
 
 const router = express.Router();
 
